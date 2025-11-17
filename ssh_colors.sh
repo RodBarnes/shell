@@ -3,7 +3,7 @@
 [[ $- != *i* ]] && return
 
 # Set the exit function
-trap reset_bg EXIT INT
+trap reset_background EXIT INT
 
 # Default background color
 background_default='#2e3436'
@@ -12,8 +12,8 @@ background_default='#2e3436'
 prompt_bold='1;'
 
 # Functions
-set_bg() { printf '\033]11;%s\007' "$1"; }
-reset_bg() { printf '\033]11;#2e3436\007'; }
+set_background() { printf '\033]11;%s\007' "$1"; }
+reset_background() { printf '\033]11;#2e3436\007'; }
 
 # Determine the host
 case "$(hostname -s)" in
@@ -32,7 +32,7 @@ case "$(hostname -s)" in
 esac
 
 # Set the background color and prompt
-set_bg "rgb:${background_color#\#}"
+set_background "rgb:${background_color#\#}"
 PS1="\[\e[${prompt_color}m\]\u@\h:\w\$\[\e[0m\] "
 
 # Set the terminal title

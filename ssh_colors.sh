@@ -17,11 +17,11 @@ reset_background() { printf '\033]11;#2e3436\007'; }
 
 # Determine the host
 case "$(hostname -s)" in
-    boss)
-      background_color='#5F2F00'  # dark orangerust
+    boss|boss-recovery)
+      background_color='#5F2F00'  # dark orange
       prompt_color='1;38;5;220'   # bright yellow
       ;;
-    shrek)
+    shrek|shrek-recovery)
       background_color='#113300'  # green
       prompt_color='1;38;5;76'    # bright green
       ;;

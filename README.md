@@ -9,4 +9,4 @@ This is a standard `.bashrc` I use on my debian servers that sources `.ssh_color
 ```
 
 ## ssh_colors.sh
-This sets the background and prompt colors, and the terminal title.
+This sets the background and prompt colors, and the terminal title.  Set it as `.ssh_color.sh` on the target system.

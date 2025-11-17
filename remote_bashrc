@@ -75,9 +75,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←
 # Load SSH-specific background + prompt colors
 [[ -f ~/.ssh_colors.sh ]] && . ~/.ssh_colors.sh
-# ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←
 
-alias recovery-reboot='sudo grub-reboot 2 && sudo reboot'
+# functions for switching between main and recovery
+recovery-reboot() {
+  reset_background
+  sudo grub-reboot 2 && sudo reboot
+}
+
+main-reboot() {
+  reset_background
+  sudo reboot
+}

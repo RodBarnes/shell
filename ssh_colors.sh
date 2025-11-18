@@ -25,6 +25,10 @@ case "$(hostname -s)" in
       background_color='#113300'  # green
       prompt_color='1;38;5;76'    # bright green
       ;;
+    media)
+      background_color='#00005f'  # dark blue
+      prompt_color='1;38;5;117'   # bright blue
+      ;;
     *)
       background_color='#2e3436'  # gray
       prompt_color='1;38;5;140'   # lavender
@@ -35,11 +39,3 @@ esac
 set_background "rgb:${background_color#\#}"
 PS1="\[\e[${prompt_color}m\]\u@\h:\w\$\[\e[0m\] "
 
-# Set the terminal title
-case "$TERM" in
-    xterm*|rxvt*|gnome*|konsole*|screen*)
-        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-        ;;
-    *)
-        ;;
-esac

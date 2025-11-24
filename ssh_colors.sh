@@ -29,6 +29,10 @@ case "$(hostname -s)" in
       background_color='#00005f'  # dark blue
       prompt_color='1;38;5;117'   # bright blue
       ;;
+   ardor)
+      background_color='#751c60'  # dark magenta
+      prompt_color='1;38;5;195'   # white
+      ;;
     *)
       background_color='#2e3436'  # gray
       prompt_color='1;38;5;140'   # lavender

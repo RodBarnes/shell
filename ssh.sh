@@ -5,11 +5,12 @@ TARGET="${1##*@}"
 TARGET="${TARGET%%.*}"
 
 case "$TARGET" in
-    ardor)  PROFILE="ardor" ;;
-    media)  PROFILE="media" ;;
-    shrek)  PROFILE="shrek" ;;
-    boss)   PROFILE="boss"  ;;
-    *)      PROFILE="Default" ;;
+  ardor)                PROFILE="ardor" ;;
+  deft)                 PROFILE="deft" ;;
+  media)                PROFILE="media" ;;
+  shrek|shrek-recovery) PROFILE="shrek" ;;
+  boss|boss-recovery)   PROFILE="boss"  ;;
+  *)                    PROFILE="Default" ;;
 esac
 
 # Magic: -- separates options from command; bash -c ensures valid child process

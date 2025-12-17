@@ -6,10 +6,11 @@ TARGET="${TARGET%%.*}"
 
 case "$TARGET" in
   ardor)                PROFILE="ardor" ;;
+  boss|boss-recovery)   PROFILE="boss"  ;;
+  brawn)                PROFILE="brawn" ;;
   deft)                 PROFILE="deft" ;;
   media)                PROFILE="media" ;;
   shrek|shrek-recovery) PROFILE="shrek" ;;
-  boss|boss-recovery)   PROFILE="boss"  ;;
   *)                    PROFILE="Default" ;;
 esac
 
